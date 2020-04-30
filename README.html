@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html>
+<link rel="stylesheet" href="css/style2.css" />
+	<body>
+	
+		<input type=button value=Пуск id="pusk" onclick = click1()>
+		
+		<form onsubmit="click2()" id="form"></form>
+	
+		<script>
+			function click1() {
+				
+				pusk.onclick = null;
+			
+				form.innerHTML += "<br><br>" + "Пожалуйста, заполните поля: " + "<br>";
+
+				
+				let input0 = document.createElement("input");
+				input0.type = "text";
+				form.append(input0);
+				
+				form.innerHTML += "<br><br>";
+			
+				let input3 = document.createElement("input");
+				input3.type = "date";
+				form.append(input3);
+				
+				form.innerHTML += "<br><br>";
+			
+				let input4 = document.createElement("input");
+				input4.type = "file";
+				form.append(input4);
+				
+				form.innerHTML += "<br><br><br>";
+				
+				let input1 = document.createElement("input");
+				input1.type = "submit";
+				form.append(input1);
+
+			};
+			
+			function click2() {
+				if (document.forms[0].elements[0].value) {alert(document.forms[0].elements[0].value)} else {alert("Первое поле пустое!!!")};
+				
+				if (document.forms[0].elements[1].value) {alert(document.forms[0].elements[1].value)} else {alert("Второе поле пустое!!!")};
+				
+				if (document.forms[0].elements[2].value) {alert(document.forms[0].elements[2].value)} else {alert("Третье поле пустое!!!")};
+			};
+			
+		</script>
+		
+	</body>
+
+</html>
+
+
+
+Ответы на вопросы:
+1.HTML формы нужны для передачи информации программам-обработчикам. События blur указывает пользователю на ошибку введения обязательного поля. События: cut, copy, paste нужны для разрешения, либо запрета копировать/изменять информацию. Отправка нужна для проверки формы перед входом на сервер. Например, пользователь вводить логин от своего личного кабинета, а событие не срабатывает, таким образом любой пользователь может посетить ваш личный кабинет.
+2.Возможности JavaScript я бы могла использовать при разработке многих функционалов. Например: Онлайн-заказ продуктов. Многие формы могли бы использоваться на этом ресурсе: дата, логин, фио, отправка и т.д. Так же формы можно использовать при создании сайта ЕГЭ и различных подготовок к экзаменам. Хорошей идеей использования форм будет являтся сайт, где можно расчитать выплаты по ипотеке и др.
+3.В наше время на каждом втором сайте используются формы. Например: Вконтакте при  регистации/авторизации. https://vk.com/
